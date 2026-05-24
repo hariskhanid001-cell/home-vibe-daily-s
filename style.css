@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #faf6f1;
+  --brown-light: #c9a97a;
+  --brown-mid: #8b6340;
+  --brown-dark: #4a2e14;
+  --brown-deep: #2c1a09;
+  --text-body: #3d2610;
+  --text-muted: #7a5535;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text-body);
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(to bottom, var(--cream), transparent);
+}
+
+.logo,
+.logo-link {
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+}
+
+.logo span,
+.logo-link span {
+  color: var(--brown-mid);
+  font-style: italic;
+}
+
+/* NAV */
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(to bottom, var(--cream), transparent);
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--brown-mid);
+  font-size: 0.8rem;
+}
+
+.back-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--brown-deep);
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+.hero-title em {
+  color: var(--brown-mid);
+}
+
+/* CARD */
+
+.card {
+  background: white;
+  width: min(420px, 90vw);
+  box-shadow: 0 8px 48px rgba(74,46,20,0.08);
+  border: 1px solid rgba(139,99,64,0.18);
+}
+
+.card-inner {
+  padding: 40px 36px;
+}
+
+.card-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--brown-deep);
+  margin-bottom: 14px;
+}
+
+.card-heading em {
+  color: var(--brown-mid);
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.card-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--brown-light);
+  margin-bottom: 24px;
+}
+
+.btn-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--brown-dark);
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+.btn-read svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.card-number {
+  font-size: 4rem;
+  color: rgba(139,99,64,0.1);
+  padding: 0 24px 24px;
+}
+
+/* ARTICLE */
+
+.article-hero {
+  padding: 140px 24px 60px;
+  text-align: center;
+}
+
+.hero-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 18px;
+}
+
+.article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: var(--brown-deep);
+  margin-bottom: 20px;
+}
+
+.article-title em {
+  color: var(--brown-mid);
+}
+
+.hero-intro {
+  max-width: 700px;
+  margin: auto;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.article-body {
+  max-width: 760px;
+  margin: auto;
+  padding: 60px 24px;
+}
+
+.idea {
+  margin-bottom: 60px;
+}
+
+.idea-number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--brown-light);
+  letter-spacing: 0.2em;
+}
+
+.idea h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.idea h2 em {
+  color: var(--brown-mid);
+}
+
+.idea p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.idea-image {
+  width: 100%;
+  border-radius: 32px;
+  display: block;
+  box-shadow: 0 18px 45px rgba(74,46,20,0.16);
+}
+
+.idea-divider {
+  height: 1px;
+  background: rgba(139,99,64,0.2);
+  margin: 50px 0;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--brown-light);
+  font-size: 0.7rem;
+}
